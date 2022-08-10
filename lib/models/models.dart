@@ -17,12 +17,12 @@ class OnBoardingItem{
 
 class ShopLoginModel{
   late bool status;
-  late String message ;
+  String ? message ;
   UserData ? data;
 
   ShopLoginModel.fromJson(Map<String,dynamic> json){
     status=json['status'];
-    message=json['message'];
+    message= json['message'] != null ? json['message'] : null;
     data=json['data'] != null ? UserData.fromJson(json['data']) : null ;
   }
 }

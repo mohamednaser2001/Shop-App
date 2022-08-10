@@ -36,3 +36,23 @@ class ShopErrorGetFavoritesState extends ShopStates{
   String error;
   ShopErrorGetFavoritesState({required this.error});
 }
+
+
+
+
+
+class ShopSuccessUpdateUserDataState extends ShopStates{}
+class ShopLoadingUpdateUserDataState extends ShopStates{}
+class ShopErrorUpdateUserDataState extends ShopStates{
+  String error;
+  ShopErrorUpdateUserDataState({required this.error});
+}
+
+
+
+class ShopSuccessGetUserDataState extends ShopStates{}
+class ShopLoadingGetUserDataState extends ShopStates{}
+class ShopErrorGetUserDataState extends ShopStates{
+  String error;
+  ShopErrorGetUserDataState({required this.error});
+}

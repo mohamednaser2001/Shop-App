@@ -55,10 +55,10 @@ Color choseToastState(ToastStates state){
 }
 
 void showToast({
-  required String text,
+  required String? text,
 required ToastStates state,
 })=> Fluttertoast.showToast(
-    msg:text,
+    msg:text==null ?'Error':text,
     toastLength: Toast.LENGTH_LONG,
     gravity: ToastGravity.BOTTOM,
     timeInSecForIosWeb: 5,

@@ -41,7 +41,7 @@ class RegisterScreen extends  StatelessWidget {
                 }
               });
             }else{
-              showToast(text: state.loginModel.message, state: ToastStates.ERROR);
+              showToast(text:  state.loginModel.message, state: ToastStates.ERROR);
             }
           }
         },
