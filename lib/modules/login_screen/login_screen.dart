@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:shop_app/components/constants.dart';
+import 'package:shop_app/layout/cubit/app_cubit.dart';
 import 'package:shop_app/layout/home_layout.dart';
 import 'package:shop_app/modules/login_screen/login_states.dart';
 import 'package:shop_app/modules/register_screen/register_screen.dart';
@@ -34,6 +35,10 @@ class LoginScreen extends  StatelessWidget {
                       MaterialPageRoute(builder: (context)=> HomeLayout()),
                       (route) => false
                 );
+                  userName = state.loginModel.data!.name;
+                  userEmail = state.loginModel.data!.email;
+                  userPhone = state.loginModel.data!.phone;
+                  userImage = state.loginModel.data!.image;
                 }
               });
             }else{

@@ -31,6 +31,7 @@ Widget onBoardingScreen(OnBoardingItem item){
        style: TextStyle(
          fontWeight: FontWeight.w700,
          fontSize: 14.0,
+         color: Colors.grey.shade800,
        ),
      ),
    ],
@@ -70,6 +71,10 @@ required ToastStates state,
 
 Widget buildListOfItemsItem( product,context)=>Container(
   height: 100,
+  decoration: BoxDecoration(
+    borderRadius: BorderRadius.circular(16.0),
+    color: Colors.white,
+  ),
   padding:const EdgeInsets.symmetric(horizontal: 10.0),
   child: Row(
     crossAxisAlignment: CrossAxisAlignment.start,

@@ -19,12 +19,13 @@ class FavoriteScreen extends StatelessWidget {
       builder: (context,state){
         return ConditionalBuilder(
           condition: state is! ShopLoadingGetFavoritesState ,         //may this code make error
-          builder: (context)=> ListView.separated(
-            itemCount: ShopCubit.get(context).favModel!.data!.data!.length,
-            itemBuilder: (context,index)=>buildListOfItemsItem(ShopCubit.get(context).favModel!.data!.data![index],context),
-            separatorBuilder: (context,index)=>Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Container(height: 1.0, color: Colors.grey,),
+          builder: (context)=> Container(
+            padding:const EdgeInsets.all(16.0),
+            color: Colors.grey.shade100,
+            child: ListView.separated(
+              itemCount: ShopCubit.get(context).favModel!.data!.data!.length,
+              itemBuilder: (context,index)=>buildListOfItemsItem(ShopCubit.get(context).favModel!.data!.data![index],context),
+              separatorBuilder: (context,index)=>const SizedBox(height: 10.0,),
             ),
           ),
           fallback: (context)=> const Center(child: CircularProgressIndicator()),

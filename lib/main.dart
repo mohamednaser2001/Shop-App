@@ -47,8 +47,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (BuildContext context) =>ShopCubit()..getProductsData()..getCategoriesData()..getUserData()..getFavoritesData()
-      ,
+      create: (BuildContext context) =>ShopCubit()..getProductsData()..getCategoriesData()..getUserData()..getFavoritesData(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
@@ -59,7 +58,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Colors.white,
           primarySwatch: Colors.deepOrange,
         ),
-        home: HomeLayout(),    // startWidget,
+        home: startWidget,
       ),
     );
   }

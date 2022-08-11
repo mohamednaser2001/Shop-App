@@ -21,6 +21,7 @@ class SearchScreen extends StatelessWidget {
         listener: (context,state){},
         builder: (context,state){
           return Scaffold(
+            backgroundColor: Colors.grey.shade100,
             appBar: AppBar(
               leading: IconButton(
                 onPressed: (){
@@ -70,10 +71,7 @@ class SearchScreen extends StatelessWidget {
                     child: ListView.separated(
                       itemCount:ShopAppSearchCubit.get(context).searchModel!=null ? ShopAppSearchCubit.get(context).searchModel!.data!.data!.length : 0,
                       itemBuilder: (context,index)=>buildSearchItem(ShopAppSearchCubit.get(context).searchModel!.data!.data![index],context),
-                      separatorBuilder: (context,index)=>Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Container(height: 1.0, color: Colors.grey,),
-                      ),
+                      separatorBuilder: (context,index)=>const SizedBox(height: 10.0,),
                     ),
                   ),
                 ],
@@ -88,6 +86,10 @@ class SearchScreen extends StatelessWidget {
 
   Widget buildSearchItem(ProductSearchModel product,context)=>Container(
     height: 100,
+    decoration: BoxDecoration(
+      color: Colors.white,
+      borderRadius: BorderRadius.circular(16.0),
+    ),
     padding:const EdgeInsets.symmetric(horizontal: 10.0),
     child: Row(
       crossAxisAlignment: CrossAxisAlignment.start,

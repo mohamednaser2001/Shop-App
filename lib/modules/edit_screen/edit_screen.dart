@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shop_app/components/constants.dart';
 import 'package:shop_app/layout/cubit/app_cubit.dart';
 import 'package:shop_app/layout/cubit/shop_states.dart';
 
@@ -19,11 +20,11 @@ class EditScreen extends  StatelessWidget {
       child: BlocConsumer<ShopCubit,ShopStates>(
         listener: (context,state){},
         builder: (context,state){
-/*
-          emailController.text= ShopCubit.get(context).userDataModel==null ? '' : ShopCubit.get(context).userDataModel.data!.email;
-          nameController.text=ShopCubit.get(context).userDataModel==null ? '' : ShopCubit.get(context).userDataModel.data!.name;
-          phoneController.text=ShopCubit.get(context).userDataModel==null ? '' : ShopCubit.get(context).userDataModel.data!.phone;
-*/
+
+          emailController.text= userEmail!;
+          nameController.text=userName!;
+          phoneController.text=userPhone!;
+
           return Scaffold(
             appBar: AppBar(
               leading: IconButton(
@@ -111,7 +112,13 @@ class EditScreen extends  StatelessWidget {
                           child: MaterialButton(
                             color: Colors.deepOrange,
                             onPressed: (){
-
+                              if(formKey.currentState!.validate()){
+                                ShopCubit.get(context).updateUserData(
+                                    name: nameController.text,
+                                    email: emailController.text,
+                                    phone: phoneController.text,
+                                );
+                              }
                             },
                             child: Row(
                               children: const [

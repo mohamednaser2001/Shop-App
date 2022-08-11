@@ -8,9 +8,9 @@ import '../shared/network/local/cache_helper.dart';
 class OnBoardingScreen extends  StatelessWidget {
 
   List<OnBoardingItem> items = [
-    OnBoardingItem(image: 'assets/images/onboarding1.jpg', body: 'body 1', title: 'page 1'),
-    OnBoardingItem(image: 'assets/images/onboarding1.jpg', body: 'body 2', title: 'page 2'),
-    OnBoardingItem(image: 'assets/images/onboarding1.jpg', body: 'body 3', title: 'page 3'),
+    OnBoardingItem(image: 'assets/images/on_boarding1.jpg', body: 'Shop from a wide selection of products from top brands, with over 50.000 product on our online shop.', title: 'Shop App'),
+    OnBoardingItem(image: 'assets/images/on_boarding2.jpg', body: 'Choose all the products you like, and buy it with the lowest price and the highest quality.', title: 'Buy'),
+    OnBoardingItem(image: 'assets/images/on_boarding3.jpg', body: 'You can order any product from anywhere, and we will deliver it to you.', title: 'Delivery'),
   ];
   var onBoardController = PageController();
   bool isLast=false;

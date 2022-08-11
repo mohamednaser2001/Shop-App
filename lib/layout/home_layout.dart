@@ -20,7 +20,7 @@ class HomeLayout extends  StatelessWidget {
           return Scaffold(
             appBar: AppBar(
               title: const Text(
-                'Salla',
+                'Shop',
                 style: TextStyle(
                   fontSize: 24.0,
                   fontWeight: FontWeight.bold,
@@ -44,6 +44,7 @@ class HomeLayout extends  StatelessWidget {
             ),
             body: cubit.bodyScreens[cubit.currentIndex],
             bottomNavigationBar: BottomNavigationBar(
+              backgroundColor: Colors.white,
               selectedItemColor: Colors.deepOrange,
               unselectedItemColor: Colors.grey,
               type: BottomNavigationBarType.fixed,

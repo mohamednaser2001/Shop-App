@@ -8,4 +8,9 @@ const String SEARCH ='products/search';
 const String UPDATE_PROFILE ='update-profile';
 const String PROFILE ='profile';
 
+ String? userName ;
+ String ? userEmail;
+ String ? userPhone;
+ String ? userImage;
+
 String ? token;
